@@ -1,0 +1,36 @@
+#### Issue summary
+
+icalc.py function failure (do_bit_shift_right)
+
+#### Issue description
+
+In icalc.py the function do_bit_shift_right gives exception. Might be caused by not using the proper parameters in function. (a)
+
+#### Steps to reproduce the issue
+
+1.  Run icalc.py 
+2.  Call do_bit_shift_right with any arguments 
+
+#### Expected result
+
+2>>1 = 1
+
+#### Actual result
+
+Exception --> Screenshot
+
+#### Priority
+
+1
+
+#### Severity
+
+Major
+
+#### Created by
+
+Máté, Kósa
+
+#### Creation date
+
+2022.06.19 

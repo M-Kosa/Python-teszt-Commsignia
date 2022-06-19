@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="6" hostname="DESKTOP-NQSSNF9" name="pytest" skipped="0" tests="26" time="0.458" timestamp="2022-06-19T13:47:26.631885"><testcase classname="tests.test_integration.Test_icalc" name="test_do_add" time="0.005" /><testcase classname="tests.test_integration.Test_icalc" name="test_do_sub" time="0.005" /><testcase classname="tests.test_integration.Test_icalc" name="test_do_mul" time="0.009" /><testcase classname="tests.test_integration.Test_icalc" name="test_do_div" time="0.005"><failure message="AssertionError: assert '0\n' == '2\n'&#10;  - 2&#10;  + 0">self = &lt;test_integration.Test_icalc object at 0x000001B86B2C7748&gt;, capfd = &lt;_pytest.capture.CaptureFixture object at 0x000001B86B30D4C8&gt;
+
+    def test_do_div(self, capfd):
+        self.icalc.do_div('6 3')
+        out, err = capfd.readouterr()
+&gt;       assert out == '2' + '\n'
+E       AssertionError: assert '0\n' == '2\n'
+E         - 2
+E         + 0
+
+tests\test_integration.py:27: AssertionError</failure></testcase><testcase classname="tests.test_integration.Test_icalc" name="test_do_rem" time="0.004"><failure message="AssertionError: assert '2.5\n' == '1\n'&#10;  - 1&#10;  + 2.5">self = &lt;test_integration.Test_icalc object at 0x000001B86B2C7908&gt;, capfd = &lt;_pytest.capture.CaptureFixture object at 0x000001B86B2EEB88&gt;
+
+    def test_do_rem(self, capfd):
+        self.icalc.do_rem('5 2')
+        out, err = capfd.readouterr()
+&gt;       assert out == '1' + '\n'
+E       AssertionError: assert '2.5\n' == '1\n'
+E         - 1
+E         + 2.5
+
+tests\test_integration.py:32: AssertionError</failure></testcase><testcase classname="tests.test_integration.Test_icalc" name="test_do_sqrt" time="0.004"><failure message="TypeError: sub() missing 1 required positional argument: 'b'">self = &lt;test_integration.Test_icalc object at 0x000001B86B2C7DC8&gt;, capfd = &lt;_pytest.capture.CaptureFixture object at 0x000001B86B2E8488&gt;
+
+    def test_do_sqrt(self, capfd):
+&gt;       self.icalc.do_sqrt('16')
+
+tests\test_integration.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;icalc.InteractiveCalculator object at 0x000001B86B1BED08&gt;, arg = '16'
+
+    def do_sqrt(self, arg):
+        'sqrt(A)'
+&gt;       print(self.cal.sub(*parse(arg)))
+E       TypeError: sub() missing 1 required positional argument: 'b'
+
+icalc.py:35: TypeError</failure></testcase><testcase classname="tests.test_integration.Test_icalc" name="test_do_bit_and" time="0.004" /><testcase classname="tests.test_integration.Test_icalc" name="test_do_bit_or" time="0.004"><failure message="AssertionError: assert '' == '3\n'&#10;  - 3">self = &lt;test_integration.Test_icalc object at 0x000001B86B2CA408&gt;, capfd = &lt;_pytest.capture.CaptureFixture object at 0x000001B86B2A5508&gt;
+
+    def test_do_bit_or(self, capfd):
+        self.icalc.do_bit_or('2 3')
+        out, err = capfd.readouterr()
+&gt;       assert out == '3' + '\n'
+E       AssertionError: assert '' == '3\n'
+E         - 3
+
+tests\test_integration.py:47: AssertionError</failure></testcase><testcase classname="tests.test_integration.Test_icalc" name="test_do_bit_xor" time="0.004" /><testcase classname="tests.test_integration.Test_icalc" name="test_do_bit_not" time="0.004"><failure message="AssertionError: assert '4\n' == '3\n'&#10;  - 3&#10;  + 4">self = &lt;test_integration.Test_icalc object at 0x000001B86B2CA048&gt;, capfd = &lt;_pytest.capture.CaptureFixture object at 0x000001B86B2B4408&gt;
+
+    def test_do_bit_not(self, capfd):
+        self.icalc.do_bit_not('4')
+        out, err = capfd.readouterr()
+&gt;       assert out == '3' + '\n'
+E       AssertionError: assert '4\n' == '3\n'
+E         - 3
+E         + 4
+
+tests\test_integration.py:57: AssertionError</failure></testcase><testcase classname="tests.test_integration.Test_icalc" name="test_do_bit_shift_left" time="0.004" /><testcase classname="tests.test_integration.Test_icalc" name="test_do_bit_shift_right" time="0.004"><failure message="NameError: name 'arg' is not defined">self = &lt;test_integration.Test_icalc object at 0x000001B86B297248&gt;, capfd = &lt;_pytest.capture.CaptureFixture object at 0x000001B86B331708&gt;
+
+    def test_do_bit_shift_right(self, capfd):
+&gt;       self.icalc.do_bit_shift_right('2 1')
+
+tests\test_integration.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;icalc.InteractiveCalculator object at 0x000001B86B1BED08&gt;, a = '2 1'
+
+    def do_bit_shift_right(self, a):
+        'num &gt;&gt; shift'
+&gt;       print(self.cal.bshl(*parse(arg)))
+E       NameError: name 'arg' is not defined
+
+icalc.py:59: NameError</failure></testcase><testcase classname="tests.test_unit.Test_Calculator" name="test_add" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_sub" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_mul" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_div" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_rem" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_sqrt" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_checksum" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_band" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_bor" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_bxor" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_bnot" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_bshl" time="0.001" /><testcase classname="tests.test_unit.Test_Calculator" name="test_bshr" time="0.001" /><testcase classname="tests.test_unit.Test_icalc" name="test_parse" time="0.001" /></testsuite></testsuites>

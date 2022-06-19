@@ -1,0 +1,36 @@
+#### Issue summary
+
+icalc.py function failure (do_div)
+
+#### Issue description
+
+In icalc.py the function do_div gives false result. Can be caused by wrong function calling. (self.cal.rem())
+
+#### Steps to reproduce the issue
+
+1.  Run icalc.py 
+2.  Call do_div with any arguments 
+
+#### Expected result
+
+6/3 = 2
+
+#### Actual result
+
+0
+
+#### Priority
+
+1
+
+#### Severity
+
+Major
+
+#### Created by
+
+Máté, Kósa
+
+#### Creation date
+
+2022.06.19 

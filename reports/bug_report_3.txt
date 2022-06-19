@@ -1,0 +1,36 @@
+#### Issue summary
+
+icalc.py function failure (do_sqrt)
+
+#### Issue description
+
+In icalc.py the function do_sqrt gives exception. Can be caused by wrong function calling. (self.cal.sub())
+
+#### Steps to reproduce the issue
+
+1.  Run icalc.py 
+2.  Call do_sqrt with any argument 
+
+#### Expected result
+
+sqrt(16) = 4
+
+#### Actual result
+
+Exception--> Screenshot
+
+#### Priority
+
+1
+
+#### Severity
+
+Major
+
+#### Created by
+
+Máté, Kósa
+
+#### Creation date
+
+2022.06.19 

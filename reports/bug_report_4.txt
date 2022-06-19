@@ -1,0 +1,36 @@
+#### Issue summary
+
+icalc.py function failure (do_bit_or)
+
+#### Issue description
+
+In icalc.py the function do_bit_or gives no result. Might be caused by missing print() function.
+
+#### Steps to reproduce the issue
+
+1.  Run icalc.py 
+2.  Call do_bit_or with any arguments 
+
+#### Expected result
+
+2|3 = 3
+
+#### Actual result
+
+ ''
+
+#### Priority
+
+1
+
+#### Severity
+
+Major
+
+#### Created by
+
+Máté, Kósa
+
+#### Creation date
+
+2022.06.19 

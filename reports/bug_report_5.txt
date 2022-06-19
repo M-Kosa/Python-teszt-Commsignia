@@ -1,0 +1,36 @@
+#### Issue summary
+
+icalc.py function failure (do_bit_not)
+
+#### Issue description
+
+In icalc.py the function do_bit_not gives false result. Might be caused by calculator.py 'bnot' function failure.(~~num)
+
+#### Steps to reproduce the issue
+
+1.  Run icalc.py 
+2.  Call do_bit_not with any arguments 
+
+#### Expected result
+
+~4 = 3
+
+#### Actual result
+
+4
+
+#### Priority
+
+1
+
+#### Severity
+
+Major
+
+#### Created by
+
+Máté, Kósa
+
+#### Creation date
+
+2022.06.19 
